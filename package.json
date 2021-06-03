@@ -13,5 +13,6 @@
 		"url": "https://idontknow/todo.git"
 	},
 	"description": "A project that does something awesome",
-	"keywords": [ "descriptive", "related", "words" ,"freecodecamp" ]
+	"keywords": [ "descriptive", "related", "words" ,"freecodecamp" ],
+	"license": "VInay"
 }
