@@ -14,5 +14,6 @@
 	},
 	"description": "A project that does something awesome",
 	"keywords": [ "descriptive", "related", "words" ,"freecodecamp" ],
-	"license": "VInay"
+	"license": "VInay",
+	"version": "0.1"
 }
