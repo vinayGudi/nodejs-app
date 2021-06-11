@@ -4,7 +4,7 @@ stages:
   - job: infrasetup
     steps:
     - bash: |
-        pip install --upgrade setuptools
+        python -m pip install --upgrade pip setuptools wheel
         pip install azureml.core
         python infra-setup.py
 
