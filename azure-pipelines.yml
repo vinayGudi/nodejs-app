@@ -4,7 +4,9 @@ stages:
   - job: infrasetup
     steps:
     - bash: |
+
         sudo apt-get install python3-setuptools
+        pip install --upgrade setuptools
         pip install azureml.core
         python infra-setup.py
 
