@@ -1,19 +1,23 @@
 stages:
-- stage: Build
+- stage: InfraSetup
   jobs:
-  - job: BuildJob
+  - job: infrasetup
     steps:
-    - script: echo Building!
-- stage: Test
+    - script: python infra-setup.py
+- stage:  training
   jobs:
-  - job: TestOnWindows
+  - job: training 
     steps:
-    - script: echo Testing on Windows!
-  - job: TestOnLinux
-    steps:
-    - script: echo Testing on Linux!
+    - script: python training.py
 - stage: Deploy
   jobs:
   - job: Deploy
     steps:
-    - script: echo Deploying the code!
+    - script: python deploy.py
+
+- stage: DestroyInfra
+  jobs:
+  - job: DestroyInfra
+    steps:
+    - script: python destroy.py
+
