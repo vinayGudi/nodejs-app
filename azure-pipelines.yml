@@ -4,8 +4,7 @@ stages:
   - job: infrasetup
     steps:
     - bash: |
-        pip install sklearn
-        pip install azureml
+        pip install azureml.core
         python infra-setup.py
 
 - stage:  training
