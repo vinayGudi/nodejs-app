@@ -28,7 +28,7 @@ model = Model(workspace=ws, name="churn-model-test")
 
 # Choose a name for your instance
 # Compute instance name should be unique across the azure region
-compute_name = "vms"
+compute_name = "vmss"
 
 # Verify that instance does not exist already
 try:
@@ -57,7 +57,7 @@ except ComputeTargetException:
 # list_vms = AmlCompute.supported_vmsizes(workspace=ws)
 
 compute_config = RunConfiguration()
-compute_config.target = "vms"
+compute_config.target = "vmss"
 compute_config.amlcompute.vm_size = "STANDARD_D1_V2"
 
 

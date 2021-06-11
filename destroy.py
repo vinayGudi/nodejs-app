@@ -16,6 +16,6 @@ ws = Workspace.get(name="handsonmlops",
                    subscription_id='bf6a60a4-e47f-478a-9c72-537da82ba9b7', resource_group='lpu-1')
 
 
-compute_name = "vms"
+compute_name = "vmss"
 instance = ComputeInstance(workspace=ws, name=compute_name)
 instance.delete(wait_for_completion=True, show_output=True)

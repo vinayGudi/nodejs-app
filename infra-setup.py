@@ -20,7 +20,7 @@ list_experiments = Experiment.list(ws)
 print(list_experiments)
 
 
-compute_name = "vms"
+compute_name = "vmss"
 
 # Verify that instance does not exist already
 try:

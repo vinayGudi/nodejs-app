@@ -69,7 +69,7 @@ except ComputeTargetException:
 # list_vms = AmlCompute.supported_vmsizes(workspace=ws)
 
 compute_config = RunConfiguration()
-compute_config.target = "vms"
+compute_config.target = "vmss"
 compute_config.amlcompute.vm_size = "STANDARD_D1_V2"
 
 

@@ -18,16 +18,46 @@ stages:
   jobs:
   - job: training 
     steps:
-    - script: python training.py
+    - task: UsePythonVersion@0
+      displayName: 'Use Python 3.8'
+      inputs:
+          versionSpec: 3.8
+    - bash: |
+        python -m pip install --upgrade pip
+        pip install setuptools
+        pip install azureml.core
+        pip install azureml
+        pip install sklearn
+        python training.py
 - stage: Deploy
   jobs:
   - job: Deploy
     steps:
-    - script: python deploy.py
+    - task: UsePythonVersion@0
+      displayName: 'Use Python 3.8'
+      inputs:
+          versionSpec: 3.8
+    - bash: |
+        python -m pip install --upgrade pip
+        pip install setuptools
+        pip install azureml.core
+        pip install azureml
+        pip install sklearn
+        python deploy.py
 
 - stage: DestroyInfra
   jobs:
   - job: DestroyInfra
     steps:
-    - script: python destroy.py
+    - task: UsePythonVersion@0
+      displayName: 'Use Python 3.8'
+      inputs:
+          versionSpec: 3.8
+    - bash: |
+        python -m pip install --upgrade pip
+        pip install setuptools
+        pip install azureml.core
+        pip install azureml
+        pip install sklearn
+        python destroy.py
 
