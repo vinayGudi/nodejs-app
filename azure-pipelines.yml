@@ -3,6 +3,10 @@ stages:
   jobs:
   - job: infrasetup
     steps:
+    - task: UsePythonVersion@0
+      displayName: 'Use Python 3.8'
+      inputs:
+          versionSpec: 3.8
     - bash: |
         python -m pip install --upgrade pip
         pip install setuptools
