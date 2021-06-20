@@ -12,7 +12,7 @@ import os
 from azureml.core.model import Model
 from azureml.core.experiment import Experiment
 from azureml.core import Workspace
-ws = Workspace.get(name="loopr-mlOps",
+ws = Workspace.get(name="demo-mltraining",
                    subscription_id='efd07289-8385-4080-98f7-5654eae372b9', resource_group='loopr-dev')
 
 experiment = Experiment(workspace=ws, name='training-experiment')
