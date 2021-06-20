@@ -12,8 +12,8 @@ import os
 from azureml.core.model import Model
 from azureml.core.experiment import Experiment
 from azureml.core import Workspace
-ws = Workspace.get(name="handsonmlops",
-                   subscription_id='bf6a60a4-e47f-478a-9c72-537da82ba9b7', resource_group='lpu-1')
+ws = Workspace.get(name="loopr-mlOps",
+                   subscription_id='efd07289-8385-4080-98f7-5654eae372b9', resource_group='loopr-dev')
 
 experiment = Experiment(workspace=ws, name='training-experiment')
 list_experiments = Experiment.list(ws)
